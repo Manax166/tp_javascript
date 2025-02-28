@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des utilisateurs</title>
+    <script src="modale-view.js"></script>
+    <script src="tp-10-formulaire.js"></script>
+</head>
+<body onload="initUtilisateurs()">
+    <button onclick='openModale("modale1")'>+ Ajouter</button>
+    <modale-view id="modale1" modale-width="20%">
+        <div slot="title" header-color="#dc3545">Créer un utilisateur</div>
+        <div slot="body">
+            <form action="https://digicode.cleverapps.io/utilisateurs/create" method="POST">
+            <h3>État civil</h3>
+            <input type="hidden" name="idCreateur" value="pripault">
+            <span>Nom</span><input type="text" name="nom"><br>
+            <span>Prenom</span><input type="text" name="prenom"><br>
+            <span>Genre</span><input type="text" name="genre"><br>
+            <span>Date Naissance</span><input type="date" name="dateNaissance"><br>
+            <span>Lieu Naissance</span><input type="text" name="lieuNaissance"><br>
+            <span>Dept Naissance</span><input type="text" name="departementNaissance"><br>
+            <h3>Adresse</h3>
+            <span>Numéro de rue</span><input type="text" name="numeroRue"><br>
+            <span>Nom de la rue</span><input type="text" name="libelleRue"><br>
+            <span>Code Postal</span><input type="text" name="codePostal"><br>
+            <span>Ville</span><input type="text" name="ville"><br>
+            </form>
+        </div>
+        <div slot="footer">
+        <input type="button" value="Annuler" onclick="closeModale('modale1')">
+        <input type="button" value="Valider" onclick="creerUtilisateur()">
+        </div>
+    </modale-view>       
+    <table>
+        <thead>
+            <tr>
+                <th>Identifiant</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Date de naissance</th>
+                <th>Lieu de naissance</th>
+                <th>Adresse</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="utilisateurs">
+
+        </tbody>
+    </table>
+</body>
+</html>
