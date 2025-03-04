@@ -1,0 +1,14 @@
+{
+    "utilisateur" : [
+        {"id" : 0,
+        "nom" : "Ripault",
+        "prenom" : "Paul",
+        "dateNaissance" : "16/07/98",
+        "lieuNaissance" : "Beauvais",
+        "departementNaissance" : "Oise",
+        "numeroRue" : "29",
+        "libelleRue" : "place Sébastopol",
+        "codePostal" : "59000",
+        "ville" : "Lille"}
+    ]
+}
